@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, Helvetica, sans-serif; /* Tipografía */
+    line-height: 1.5; /*Controla la altura de cada
+    línea de texto para mejorar la legibilidad*/
+}
+
+header{
+    background-color: #311157;
+    color: #FFF;
+    text-align: center;
+    /* Text-align sólo funciona en elemento en bloque porque afecta al contenido dentro del bloque.
+    No funciona en elementos en línea porque estos ocupan solo el espacio necesario para su contenido. */
+}
+
+footer{
+    background-color: #d4d4d4;
+}
+
+.menu{
+    list-style: none;
+}
+
+.enlace{
+    text-decoration: none;
+    color: #FFF;
+    font-weight: bold;
+    
+}
+
+.enlace:hover{
+    color: #ffdc23;
+    text-decoration: underline;
+}
+
+.subtitulo{
+    font-size: 20px;
+    color: #412e5a ;
+}
+
+.boton-contacto{
+    background-color: #5f00dd;
+    color: #FFF;
+    width: 100px;
+    height: 50px;
+    border: none;
+}
+
+.boton-contacto:hover{
+    background-color: #dd0000;
+}
+
+.boton-contacto:active{
+    background-color: #00ddd1;
+    color: #000;
+}
+
+.contacto div{
+    text-align: center;
+}
+
+#titulo-principal{
+    text-decoration: underline;
+    /* Utilizar los selectores de id con mucho cuidado.
+    Los id tienen una mayor especificidad en css, lo que puede causar problemas.
+     */
+}
