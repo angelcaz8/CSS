@@ -1,69 +1,48 @@
-body {
-    font-family: Arial, Helvetica, sans-serif; /* Tipografía */
-    line-height: 1.5; /*Controla la altura de cada
-    línea de texto para mejorar la legibilidad*/
+:root{
+    --color-primario : #0a0a0a;
+    --color-background: #f2a257;
+    --color-acentos: #e3f2fd;
+    --color-bordes:#ddd;
+    --color-texto: #333;
+    --color-secundario: #fff;
 }
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-background);
+    color: var(--color-texto);
+    line-height: 1.8;
 
+}
 header{
-    background-color: #311157;
-    color: #FFF;
     text-align: center;
-    /* Text-align sólo funciona en elemento en bloque porque afecta al contenido dentro del bloque.
-    No funciona en elementos en línea porque estos ocupan solo el espacio necesario para su contenido. */
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    padding: 10px;
+}
+section{
+   
+    border: 3px solid var(--color-bordes); 
+    background-color: var(--color-secundario);
+    border-radius: 15px;
+    padding: 15px;
+    margin: 20px;
+}
+h2{
+    color: var(--color-primario)
+
+}
+.box {
+    display: inline-block;
+    background-color: lightblue;
+    border: 1px solid black;
+    padding: 10px;
+    margin-right: 60px; /* Agrega separación entre los elementos */
 }
 
-footer{
-    background-color: #d4d4d4;
-}
-
-.menu{
-    list-style: none;
-}
-
-.enlace{
-    text-decoration: none;
-    color: #FFF;
-    font-weight: bold;
-    
-}
-
-.enlace:hover{
-    color: #ffdc23;
-    text-decoration: underline;
-}
-
-.subtitulo{
-    font-size: 20px;
-    color: #412e5a ;
-}
-
-.boton-contacto{
-    background-color: #5f00dd;
-    color: #FFF;
-    width: 100px;
-    height: 50px;
-    border: none;
-}
-
-.boton-contacto:hover{
-    background-color: #dd0000;
-}
-
-.boton-contacto:active{
-    background-color: #00ddd1;
-    color: #000;
-}
-
-.contacto div{
-    text-align: center;
-}
-
-#titulo-principal{
-    text-decoration: underline;
-    /* Utilizar los selectores de id con mucho cuidado.
-    Los id tienen una mayor especificidad en css, lo que puede causar problemas.
-     */
-}
- h2{
-    color: green;
+.block{
+    display: block;
+    width: 150px;
+    height: 30px;
 }
