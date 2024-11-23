@@ -64,3 +64,6 @@ footer{
     Los id tienen una mayor especificidad en css, lo que puede causar problemas.
      */
 }
+ h2{
+    color: green;
+}
