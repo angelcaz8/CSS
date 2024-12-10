@@ -21,7 +21,7 @@ body.tema-oscuro {
     --color-background: #333;
     --color-texto: #fff;
     --color-primario: #1c1c1c;
-    --color-secundario: #222;
+    --color-secundario: #e3931a;
 }
 
 /* General */
@@ -37,21 +37,25 @@ body {
 
 /* Header */
 header {
-    text-align: center;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
     background-color: var(--color-primario);
     color: var(--color-secundario);
     padding: 20px;
+    height: 100px;
 }
 
 /* Navbar con Flexbox */
 nav ul {
-    list-style: none;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
     padding: 0;
     margin: 0;
-    gap: 20px; /* Espaciado entre enlaces */
+    list-style: none;
 }
 
 nav ul li a {
@@ -67,69 +71,69 @@ nav ul li a:hover {
 
 /* Secciones */
 section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
     border: 3px solid var(--color-bordes);
     background-color: var(--color-secundario);
     border-radius: 15px;
     padding: 20px;
     margin: 20px;
+    flex-wrap: wrap;
+    align-content: center;
     transition: transform 0.3s;
-    display: flex; /* Sección flexible */
-    flex-direction: column; /* Elementos en columna */
-    align-items: center; /* Centrar contenido */
-    gap: 15px; /* Espacio entre los elementos internos */
 }
 
 section:hover {
     transform: scale(1.02);
 }
 
-/* Contenedor de Tarjetas */
-.tarjetas-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px; /* Espaciado entre tarjetas */
+/* Contenedor Momentos Destacados */
+#momentos-destacados {
+    position: relative;
+    width: 100%;
+    overflow-x: auto; /* Habilita el deslizamiento horizontal */
+    padding: 20px 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+    border-radius: 15px;
+    border: 3px solid var(--color-bordes);
+    background-color: var(--color-secundario);
 }
 
-/* Tarjetas */
-.box {
+/* Título Momentos Destacados */
+#momentos-destacados h2 {
+    position: sticky;
+    top: 0;
+    text-align: center;
+    margin-bottom: 15px;
+    background-color: var(--color-secundario); /* Asegura que el fondo no se mezcle con el scroll */
+    padding: 10px 0; /* Ajusta el espaciado para que se vea bien */
+    z-index: 10; /* Asegura que el título esté por encima del contenido deslizante */
+}
+
+/* Contenedor de las imágenes */
+#momentos-destacados .imagenes-container {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--color-secundario);
-    border: 1px solid var(--color-bordes);
-    border-radius: 8px;
-    padding: 20px;
-    width: 200px;
+    gap: 15px;
+    width: max-content;
+    scroll-snap-type: x mandatory;
+}
+
+/* Estilo para cada imagen */
+#momentos-destacados .box {
+    min-width: 250px;
     height: 150px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s, background-color 0.3s;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    scroll-snap-align: start;
+    transition: transform 0.3s ease;
 }
 
-.box:hover {
+/* Efecto de hover en las imágenes */
+#momentos-destacados .box:hover {
     transform: scale(1.05);
-    background-color: var(--color-tarjeta-hover);
 }
-
-/* Listado de "Donde ver" */
-.block {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 150px;
-    height: 40px;
-    line-height: 30px;
-    cursor: pointer;
-    margin: 5px auto;
-    text-align: center;
-    border: 1px solid var(--color-bordes);
-    border-radius: 5px;
-    background-color: var(--color-secundario);
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.block:hover {
-    background-color: var(--color-hover);
-    transform: scale(1.05);}
